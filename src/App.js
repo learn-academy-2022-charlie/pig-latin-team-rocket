@@ -35,15 +35,19 @@ class App extends Component{
 
       // your code here!
 
-      let consonants  = '';
-      for(let i = 0; i < consonants.length; i++){
-        if(vowelsArray.includes(currentWord[i])){
-          break;
-        }
-        consonants += currentWord[i];
-      }
-      console.log(consonants)
-
+      // let consonants  = '';
+      // for(let i = 0; i < consonants.length; i++){
+      //   if(vowelsArray.includes(currentWord[i])){
+      //     break;
+      //   }
+      //   consonants += currentWord[i];
+      // }
+      // console.log(consonants)
+      
+      //let burritoWord = ""
+      //if (currentWord.indexOf(0) === vowelsArray.indexOf(0)) {
+        //burritoWord = currentWord + "hay";
+        //return burritoWord;
 
 //  ### Rules of Pig Latin
 // - For words beginning with a vowel, add "way" to the end.
@@ -52,10 +56,47 @@ class App extends Component{
 // - "y" is treated like a vowel in appropriate circumstances.
 
       // Remember: console.log is your friend :)
-
+      
+      // alpha 
+      // does the first letter match a, e, i, o, u,
+      // if it does
+      // then output alpha + "way"
+      
+      // queen
+      // does the u have a q before it
+      // identify the position of u and use that position to see if its a q in front of u
+      // if there is q in front the u
+      // seperate the word at the letter after the u and add quay to the end of the new word
+      // eenquay
+      
+      // through
+      // identify position of o
+      // if o is not the first letter 
+      // identify how many letters are before it
+      // take those letters and add ay to the end of the word
+      // oughthray
+      
+      // yummy
+      // does the word start with a special vowel
+      // if so find the position of that letter
+      // take the posistioning of the letter and move to the end of word
+      // ad ay to the end of the word as well
+      // ummyyay
+      
+      // squeal
+      // does the consonant include qu 
+      // if so does it have letters before it
+      // if it does the u stay in its position and we move s and q to the end with ay added
+      // uealsqay
+      
+      // fry
+      // is y biend treated like a vowel in this phrase
+      // if so move consonants that are in front of y to the end of y
+      // add ay
+      // yfray
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
-      return currentWord
+      //return currentWord
     })
 
 
