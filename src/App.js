@@ -21,7 +21,7 @@ class App extends Component{
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
     let userInput = this.state.phrase.split(" ")
-    console.log("userInput:", userInput)
+    // console.log("userInput:", userInput)
 
     // now that we have an array of words, we can map over the array and access each word
     let translatedWordsArray = userInput.map(currentWord => {
@@ -34,6 +34,22 @@ class App extends Component{
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+
+      let consonants  = '';
+      for(let i = 0; i < consonants.length; i++){
+        if(vowelsArray.includes(currentWord[i])){
+          break;
+        }
+        consonants += currentWord[i];
+      }
+      console.log(consonants)
+
+
+//  ### Rules of Pig Latin
+// - For words beginning with a vowel, add "way" to the end.
+// - For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
+// - If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
+// - "y" is treated like a vowel in appropriate circumstances.
 
       // Remember: console.log is your friend :)
 
