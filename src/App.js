@@ -29,7 +29,7 @@ class App extends Component{
       console.log("currentWord:", currentWord)
 
       let vowelsArray = currentWord.split("").filter(vowel => {
-        return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
+        return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u" || vowel === "y"
       })
       console.log("vowelsArray:", vowelsArray)
 
@@ -48,11 +48,22 @@ class App extends Component{
       // does the first letter match a, e, i, o, u,
       // if it does
       // then output alpha + "way"
-      if(){
-       console.log(currentWord + "hay")
-      }
+      let yIndex = currentWord.indexOf("y")
+      console.log(yIndex)
+      let qIndex = currentWord.indexOf("qu")
+      console.log(qIndex)
+      let firstVowelIndex = currentWord.indexOf(vowelsArray[0])
         
-       
+        if(currentWord[0] === vowelsArray[0] ){
+           currentWord = currentWord + "way"
+        } else if(qIndex !== -1){
+          currentWord = currentWord.substring(qIndex + 2) + currentWord.substring(0, qIndex + 2) + "ay"
+        } else if(firstVowelIndex !== 0 ) {
+          currentWord = currentWord.substring(firstVowelIndex) + currentWord.substring(0,firstVowelIndex) +"ay"
+        } else if(yIndex > 0 && yIndex !== 2  ){
+          currentWord = currentWord.substring(yIndex) + currentWord.substring(0 ,yIndex) + "ay"
+        } 
+        
       // queen
       // does the u have a q before it
       // identify the position of u and use that position to see if its a q in front of u
@@ -128,7 +139,7 @@ class App extends Component{
       <>
         <h1>Pig Latin Translator</h1>
         <img
-          src={butcherPig}
+          src={butcherPig} class="animated"
           alt="pig with butcher cut names in pig latin"
           className="butcherPig"
         />
@@ -147,7 +158,7 @@ class App extends Component{
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by MrRobot & Davon</footer>
       </>
     )
   }
