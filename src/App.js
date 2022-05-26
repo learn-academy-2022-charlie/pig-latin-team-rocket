@@ -35,20 +35,7 @@ class App extends Component{
 
       // your code here!
 
-      // let consonants  = '';
-      // for(let i = 0; i < consonants.length; i++){
-      //   if(vowelsArray.includes(currentWord[i])){
-      //     break;
-      //   }
-      //   consonants += currentWord[i];
-      // }
-      // console.log(consonants)
       
-      //let burritoWord = ""
-      //if (currentWord.indexOf(0) === vowelsArray.indexOf(0)) {
-        //burritoWord = currentWord + "hay";
-        //return burritoWord;
-
 //  ### Rules of Pig Latin
 // - For words beginning with a vowel, add "way" to the end.
 // - For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
@@ -61,7 +48,11 @@ class App extends Component{
       // does the first letter match a, e, i, o, u,
       // if it does
       // then output alpha + "way"
-      
+      if(){
+       console.log(currentWord + "hay")
+      }
+        
+       
       // queen
       // does the u have a q before it
       // identify the position of u and use that position to see if its a q in front of u
@@ -96,7 +87,7 @@ class App extends Component{
       // yfray
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
-      //return currentWord
+      return currentWord
     })
 
 
